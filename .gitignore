@@ -1,5 +1,5 @@
 node_modules/
 references/
-src/*
+src*
 !src/wp-content/themes/aquaban
 **/.DS_Store
