@@ -1,5 +1,9 @@
 node_modules/
 references/
-src*
+src/*
+!src/wp-content
+src/wp-content/*
+!src/wp-content/themes
+src/wp-content/themes/*
 !src/wp-content/themes/aquaban
 **/.DS_Store
