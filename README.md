@@ -1,9 +1,4 @@
 # Wordpress шаблон для автомойки Аквабан 
 https://аквабан.рф
 
-Дизайн проект:
-https://www.figma.com/file/mg1xPLE5zR8A5RDDhICFbb/Eduguru?node-id=78%3A128
-https://www.figma.com/file/Bjw2U0B9cfN8m4Q1W2T4Tr/Eduguru-mobile?node-id=0%3A1
-
-
-ТЗ: https://docs.google.com/document/d/1KE1qQWEL4ebZfGScRk_-lUneK54T9SYJzv61C6PRGQw/edit?usp=sharing
+Дизайн проект: https://www.figma.com/file/7Ya82fPKC7JH4e9FLF9MSM/%D0%90%D0%BA%D0%B2%D0%B0%D0%B1%D0%B0%D0%BD?node-id=0%3A1
