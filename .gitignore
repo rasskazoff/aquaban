@@ -1,0 +1,5 @@
+node_modules/
+references/
+src/*
+!**/aquaban/
+**/.DS_Store
