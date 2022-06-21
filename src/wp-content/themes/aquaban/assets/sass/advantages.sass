@@ -1,0 +1,47 @@
+@import settings.sass
+    
+#advantages
+    background: url(../images/bg_advantages.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 90px 0
+    position: relative
+    .glow
+        &:nth-of-type(1)
+            width: 272px
+            height: 295px
+            left: -176px
+            top: 140px
+            background: rgba(0, 175, 234, 0.6)
+            border-radius: 300px
+            filter: blur(150px)
+        &:nth-of-type(2)
+            width: 256px
+            height: 173px
+            right: -100px
+            top: 580px
+            background: rgba(248, 156, 28, 0.55)
+            filter: blur(125px)
+            border-radius: 250px
+    h2
+        padding-bottom: 30px
+    .items
+        width: 25%
+        margin: auto 0
+        margin: 60px 0
+        .item
+            padding: 20px 0
+            .num
+                color: #ddd
+                font-weight: 900
+                font-size: 30px
+                padding-bottom: 5px
+            .text
+                font-size: $font-m
+                &::before
+                    content: url(../images/item.svg)
+    .image
+        width: 50%
+        img
+            margin: auto
+            padding: 31px 0px 0px 45px

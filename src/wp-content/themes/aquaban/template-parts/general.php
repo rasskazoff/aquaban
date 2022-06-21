@@ -8,7 +8,7 @@ Template Post Type: post, page, product
 
 <?php include 'main.php' ?>
 <?php include 'online.php' ?>
-<?php include 'adv.php' ?>
+<?php include 'advantages.php' ?>
 <?php include 'price.php' ?>
 <?php include 'tariffs.php' ?>
 <?php include 'sale.php' ?>
