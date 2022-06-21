@@ -1,0 +1,51 @@
+@import settings.sass
+
+#about
+    background: url(../images/texture.png)
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 90px 0
+    position: relative
+    &::before
+        content: ''
+        height: 300px        
+        width: 100%
+        display: block
+        background: linear-gradient(0deg, rgba(252, 252, 252, 0) 0%, #FCFCFC 100%)
+        position: absolute
+        top: 0
+    &::after 
+        content: ''
+        height: 300px        
+        width: 100%
+        display: block
+        background: linear-gradient(rgba(252, 252, 252, 0) 0%, #FCFCFC 100%)
+        position: absolute
+        bottom: 0
+    .container
+        position: relative
+        z-index: 2
+        .text_wrap
+            margin: auto
+        h2
+            padding-bottom: 60px
+        .text
+            font-size: $font-xl
+            color: $gray
+            padding-right: 60px
+            p
+                font-size: inherit
+    .video_wrap
+        background: url(../images/player_bg.png)
+        background-repeat: no-repeat
+        background-size: cover
+        .video
+            background: url(../images/player.svg)
+            background-repeat: no-repeat
+            background-size: cover
+            width: 500px
+            height: 500px
+            display: flex
+            .video_btn
+                margin: auto
+

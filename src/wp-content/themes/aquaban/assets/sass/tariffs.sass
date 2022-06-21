@@ -1,0 +1,58 @@
+@import settings.sass
+    
+#tariffs
+    background: url(../images/tariffs_bg.png)
+    background-size: cover
+    background-repeat: no-repeat
+    padding: 90px 0
+    position: relative
+    &::before
+        content: ''
+        height: 160px        
+        width: 100%
+        display: block
+        background: linear-gradient(180deg, #FCFCFC 0%, rgba(252, 252, 252, 0) 100%)
+        position: absolute
+        top: 0
+    &::after 
+        content: ''
+        height: 160px        
+        width: 100%
+        display: block
+        background: linear-gradient(180deg, #FCFCFC 0%, rgba(252, 252, 252, 0) 100%)
+        transform: rotate(-180deg)
+        position: absolute
+        bottom: 0
+    .container
+        position: relative
+        z-index: 2
+    .row
+        padding-top: 60px
+    .col
+        background: url(../images/tariffs_circle.svg)
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        text-align: center
+        width: 300px
+        height: 300px
+        margin: auto
+        display: flex
+        &:nth-last-of-type(3)
+            margin-left: 0
+        &:nth-last-of-type(1)
+            margin-right: 0
+        .content
+            margin: auto
+            .name
+                font-size: $font-xxl
+                font-weight: 700
+            &>*
+                margin: 10px
+            .btn
+                display: block
+                padding-bottom: 8px
+                padding-top: 8px
+                margin: 10px
+                font-weight: 600
+                font-size: $font-s
