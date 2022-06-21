@@ -1,0 +1,15 @@
+#online
+    h2
+        &::after
+            content: url(../images/online.svg)
+            padding: 20px
+    .tabs
+        .tab
+            display: none
+            margin: auto -20px
+            .col
+                margin: auto
+                width: 100%
+                padding: 20px
+        #tab-btn-1:checked~#content-1, #tab-btn-2:checked~#content-2
+            display: flex

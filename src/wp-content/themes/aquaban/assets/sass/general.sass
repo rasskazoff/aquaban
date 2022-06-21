@@ -1,0 +1,57 @@
+@import settings.sass
+
+*
+    font-family: 'Montserrat', sans-serif
+    font-size: $font-m
+    &::before
+        padding-right: 5px
+    &::after
+        padding-left: 5px
+body
+    background-color: #FCFCFC
+.container
+    max-width: 1200px
+    margin: auto
+    padding: 0 20px
+.row
+    display: flex
+.phone::before
+    content: url('../images/tel.svg')
+.mail::before
+    content: url('../images/mail.svg')
+.clock::before
+    content: url('../images/clock.svg')
+.marker::before
+    content: url('../images/marker.svg')
+h1,h2
+    font-size: $tittle
+    font-weight: 800
+    background: $tittle-gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+h1
+    padding: 30px 0
+h2
+    &::before
+        content: ''
+        width: 100px
+        height: 5px
+        background: $blue
+        display: block
+        margin-bottom: 10px
+.btn
+    background: $btn-gradient
+    color: $white
+    font-weight: 800
+    padding: 16px 27px
+    border-radius: 50px
+    text-align: center
+    justify-self: center
+    &.btn_border
+        background: url(../images/border-btn.svg)
+        background-repeat: no-repeat
+        background-size: 100% 100%
+        color: $black
+        

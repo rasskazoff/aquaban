@@ -1,0 +1,65 @@
+@import settings.sass
+
+.header
+    position: relative
+    z-index: 2
+    padding-top: 30px
+    padding-bottom: 70px
+    .header_content
+        width: 100%
+    .header_top
+        margin: 0 -10px
+        .content
+            margin-top: -10px 
+        .col
+            padding: 10px
+        .schedule
+            margin: auto
+            .content_item
+                &:nth-child(2n)
+                    font-size: $font-xxs
+        .tittle
+            font-size: $font-m
+            font-weight: 700
+        .content_item
+            font-size: $font-xs
+            font-weight: 500
+            color: $gray
+            align-self: end
+            &:nth-child(odd)
+                padding-right: 25px           
+                padding-top: 20px
+        .contact
+            .content_item
+                padding-right: 0
+                text-align: right
+                color: $black
+                a
+                    color: inherit
+                span
+                    font-size: $font-xxs
+    .site-branding
+        padding-right: 50px
+        img
+            max-width: 250px
+            padding: 10px
+    .main-navigation
+        border-top: 2px solid $orange
+        .menu
+            margin: 0 -10px
+            display: flex
+            li
+                margin: auto
+                padding: 10px
+                &:first-child
+                    margin-left: 0
+                &:last-child
+                    margin-right: 0
+                a
+                    font-size: $font-xs
+                    font-weight: 500
+                    color: $black
+                    &:active
+                        font-weight: 700
+                        border-bottom: 4px solid $blue
+                        padding: 5px 0
