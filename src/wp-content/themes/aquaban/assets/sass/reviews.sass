@@ -1,0 +1,48 @@
+@import settings.sass
+
+#reviews
+    h2
+        padding-bottom: 60px
+    .descript
+        padding-bottom: 40px
+    .slider
+        margin-bottom: 130px
+        .slider__wrapper
+            overflow: hidden
+            .slider__item_active
+                .reviews_wrap
+                    display: block
+            .reviews_wrap
+                background: #F2F2F2
+                border-radius: 10px
+                padding: 30px
+                display: none
+                .reviews_user
+                    padding-bottom: 10px
+                    .col
+                        margin: auto 0
+                        padding: 0 30px
+                    .name
+                        font-size: $font-xl
+                        font-weight: 700
+                        color: $black
+                        padding-bottom: 10px
+                    .date
+                        font-size: $font-m
+                        color: $gray
+                    .img
+                        border: 10px solid #F2F2F2
+                        box-shadow: 0 0 0 1px $blue
+                        width: 80px
+                        height: 80px
+                        border-radius: 100%
+                        background-size: cover
+                .reviews_text
+                    padding: 20px 0
+        .slider__control
+            width: 40px
+            height: 40px
+            background-size: contain
+            margin: 0 -20px
+        .slider__indicators
+            bottom: -40px

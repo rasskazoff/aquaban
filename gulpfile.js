@@ -54,6 +54,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'src/wp-content/themes/'+template+'/assets/js/global.js',
+		'src/wp-content/themes/'+template+'/assets/js/scroll.js',
 		//'src/wp-content/themes/twentyseventeen/assets/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

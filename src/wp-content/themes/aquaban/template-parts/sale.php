@@ -38,9 +38,10 @@
         </div>
         <script>
         document.addEventListener('DOMContentLoaded', function () {
-        const slider = new ChiefSlider('.slider', {
+        const slider = new ChiefSlider('#sale .slider', {
             loop: true,
             autoplay: false,
+            swipe: true,
         });
         });
         </script>

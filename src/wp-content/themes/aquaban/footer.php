@@ -11,41 +11,38 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer" style="padding-top: 500px">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$aquaban_description = get_bloginfo( 'description', 'display' );
-			if ( $aquaban_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $aquaban_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'aquaban' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'aquaban' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'aquaban' ), 'aquaban', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+		<footer id="footer" class="site-footer">
+			<div class="container row">
+				<div class="site-branding col">
+					<?php
+					the_custom_logo();
+					if ( is_front_page() && is_home() ) :
+						?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php
+					else :
+						?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<?php
+					endif;
+					$aquaban_description = get_bloginfo( 'description', 'display' );
+					if ( $aquaban_description || is_customize_preview() ) :
+						?>
+						<p class="site-description"><?php echo $aquaban_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<?php endif; ?>
+				</div><!-- .site-branding -->
+				<div class="col site-info">
+						<div>Все права защищены.</div>
+						<div>ООО «Автобан55» ОГРН 1145543048969 ИНН 5501262038</div>
+				</div>
+				<div class="col right">
+					<div class="to-top"><a href="#masthead">Наверх</a></div>
+					<div class="design">Сайт запустили: <a href="#">NM</a> & <a href="">H1</a></div>
+				</div>
+			</div>
+		</footer>
+		</div><!-- #contacts -->
+	</div><!-- #page -->
 <?php wp_footer(); ?>
 
 </body>
