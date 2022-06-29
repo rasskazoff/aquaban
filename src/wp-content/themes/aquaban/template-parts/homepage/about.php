@@ -12,7 +12,7 @@
             <div class="col video_wrap">
                 <div class="video">
                     <div class="video_btn">
-                        <a href="#"><img src="<?php echo get_bloginfo('template_url');?>/assets/images/player_btn.svg" alt="" class="player"></a>
+                        <a href="#popup:about_video"><img src="<?php echo get_bloginfo('template_url');?>/assets/images/player_btn.svg" alt="" class="player"></a>
                     </div>
                 </div>
             </div>

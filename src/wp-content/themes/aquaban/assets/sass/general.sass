@@ -1,5 +1,7 @@
 @import settings.sass
 
+html 
+  scroll-behavior: smooth
 *
     font-family: 'Montserrat', sans-serif
     font-size: $font-m
@@ -44,6 +46,15 @@ h2
         background: $blue
         display: block
         margin-bottom: 10px
+h3
+    font-size: 30px
+    font-weight: 800
+    background: $tittle-gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+    width: fit-content
 .btn
     background: $btn-gradient
     color: $white

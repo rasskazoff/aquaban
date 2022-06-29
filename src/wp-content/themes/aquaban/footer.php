@@ -37,12 +37,13 @@
 				</div>
 				<div class="col right">
 					<div class="to-top"><a href="#masthead">Наверх</a></div>
-					<div class="design">Сайт запустили: <a href="#">NM</a> & <a href="">H1</a></div>
+					<div class="design">Сайт запустили: <a href="https://www.nm-team.ru/" target="_blank">NM</a> & <a href="https://h1-digital.ru/" target="_blank">H1</a></div>
 				</div>
 			</div>
 		</footer>
 		</div><!-- #contacts -->
 	</div><!-- #page -->
+	
 <?php wp_footer(); ?>
 
 </body>

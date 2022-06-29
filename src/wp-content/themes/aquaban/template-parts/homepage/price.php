@@ -61,7 +61,7 @@
                     ДОП. УСЛУГИ
                 </div>
                 <div class="btn_wrap">
-                    <a href="#" class="btn">Подробнее</a>
+                    <a href="#popup:price" class="btn">Подробнее</a>
                 </div>
             </div>
         </div>

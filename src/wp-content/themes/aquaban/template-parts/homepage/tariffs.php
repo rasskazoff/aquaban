@@ -8,7 +8,7 @@
                     <img src="<?php echo get_bloginfo('template_url');?>/assets/images/tariff-1.svg" alt="">
                     <div class="name">Эконом - 10</div>
                     <div class="btn_wrap">
-                        <a href="#" class="btn">Подробнее</a>
+                        <a href="#popup:tariff1" class="btn">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                     <img src="<?php echo get_bloginfo('template_url');?>/assets/images/tariff-2.svg" alt="">
                     <div class="name">Эконом - 10</div>
                     <div class="btn_wrap">
-                        <a href="#" class="btn">Подробнее</a>
+                        <a href="#popup:tariff2" class="btn">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                     <img src="<?php echo get_bloginfo('template_url');?>/assets/images/tariff-3.svg" alt="">
                     <div class="name">Эконом - 10</div>
                     <div class="btn_wrap">
-                        <a href="#" class="btn">Подробнее</a>
+                        <a href="#popup:tariff3" class="btn">Подробнее</a>
                     </div>
                 </div>
             </div>
