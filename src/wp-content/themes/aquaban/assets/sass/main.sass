@@ -50,19 +50,30 @@
     position: relative
     z-index: 2
     .container
+        @media (max-width: 1200px)
+        flex-wrap: wrap-reverse
         >.col
             width: 50%
             padding-right: 50px
+            @media (max-width: 1200px)
+                width: 100%
+                padding-right: 10px
+                text-align: center
+                text-align: -webkit-center
             .description
                 font-size: $font-l
                 color: $gray
                 padding-bottom: 40px
             .btn
                 margin-right: 20px
-            .btn_border
-                margin-left: auto
+                white-space: nowrap
+                @media (max-width: 1200px)
+                    margin: 10px
             >.row
                 padding: 10px 0
+                margin-left: -10px
+                flex-wrap: wrap
+                justify-content: center
 .transition
     width: 100%
     padding-top: 50px

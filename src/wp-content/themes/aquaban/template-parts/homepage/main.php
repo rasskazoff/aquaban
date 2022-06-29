@@ -5,11 +5,21 @@
     <div id="main">
         <div  class="row container">
             <div class="col">
-                <h1>Чистый автомобиль за 5 минут</h1>
-                <div class="description">Аквабан - автоматизированная туннельная экспресс-мойка нового поколения</div>
+                <?php while (have_rows('pervyj_blok')) : the_row(); ?>
+                <?php if (get_sub_field('zagolovok')) : ?>
+                    <h1><?= get_sub_field('zagolovok') ?></h1>
+                <?php endif; ?>
+                <?php if (get_sub_field('opisanie')) : ?>
+                    <div class="description"><?= get_sub_field('opisanie') ?></div>
+                <?php endif; ?>
+                <?php endwhile; ?>
                 <div class="row">
-                    <a href="#" class="btn">Узнать стоимость</a>
-                    <a href="#" class="btn btn_border">Аквабан ВКонтакте</a>
+                    <a href="#price" class="btn">Узнать стоимость</a>
+                    <?php while (have_rows('kontakty')) : the_row(); ?>
+                    <?php if (get_sub_field('vk')) : ?>
+                        <a href="<?= get_sub_field('vk') ?>" class="btn btn_border">Аквабан ВКонтакте</a>
+					<?php endif; ?>
+                    <?php endwhile; ?>
                 </div>
             </div>
             <div class="col">

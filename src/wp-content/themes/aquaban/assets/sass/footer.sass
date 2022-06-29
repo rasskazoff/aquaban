@@ -2,6 +2,21 @@
 
 #footer
     padding-bottom: 60px
+    @media (max-width: 960px)
+        padding-bottom: 0
+        *
+            white-space: normal
+    .row
+        padding: 60px 20px
+        @media (max-width: 960px)
+            flex-wrap: wrap
+            text-align: center
+            padding: 0
+            .col
+                margin-left: auto
+                margin-right: auto
+                text-align: center
+                margin: 70px 0
     .container>.col
         margin-top: auto
     .site-branding

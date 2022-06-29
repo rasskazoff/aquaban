@@ -2,32 +2,48 @@
     <div class="container">
         <h2 class="h2">Наши контакты</h2>
         <div class="row">
+            <?php while (have_rows('kontakty')) : the_row(); ?>
             <div class="col content">
                 <div class="contact">
+                <?php if (get_sub_field('telefon')) : ?>
                     <div class="phone">
-                        <a href="tel:+73812955055"><span>8 (3812)</span> 955-055</a>
+                        <a href="tel:"><?= get_sub_field('telefon') ?></a>
                     </div>
+                <?php endif; ?>
+                <?php if (get_sub_field('pochta')) : ?>
                     <div class="mail">
-                        <a href="mailto:955055@bk.ru">955055@bk.ru</a>
+                        <a href="mailto:<?= get_sub_field('pochta') ?>"><?= get_sub_field('pochta') ?></a>
                     </div>
+                <?php endif; ?>
                 </div>
                 <div class="address">
                     <h3>Адрес:</h3>
-                    <div class="address_item">ул. Конева, 18</div>
-                    <div class="address_item">ул. Конева, 18</div>
+                    <?php if (get_sub_field('adres_1')) : ?>
+                        <div class="address_item"><?= get_sub_field('adres_1') ?></div>
+					<?php endif; ?>
+                    <?php if (get_sub_field('adres_2')) : ?>
+                        <div class="address_item"><?= get_sub_field('adres_2') ?></div>
+					<?php endif; ?>
                 </div>
                 <div class="time">
                     <h3>Время работы:</h3>
-                    <div class="time_item">Ежедневно 24 часа</div>
-                    <div class="time_descript">Перерыв:<br>01:00 - 04:00 Пн-Чт</div>
+                    <?php if (get_sub_field('vremya_raboty')) : ?>
+                        <div class="time_item"><?= get_sub_field('vremya_raboty') ?></div>
+					<?php endif; ?>
+                    <?php if (get_sub_field('primechanie')) : ?>
+                        <div class="time_descript"><?= get_sub_field('primechanie') ?></div>
+					<?php endif; ?>
                 </div>
             </div>
-
+            
             <div class="col">
                 <div class="social">
-                    <a class="vk" href="https://vk.com"></a>
+                    <?php if (get_sub_field('vk')) : ?>
+                        <a class="vk" href="<?= get_sub_field('vk') ?>"></a>
+					<?php endif; ?>
                 </div>
             </div>
+            <?php endwhile; ?>
 
             <div class="col">
                 <div class="map">

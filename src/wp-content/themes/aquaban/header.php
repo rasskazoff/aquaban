@@ -48,30 +48,44 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 		<div class="header_content">
+			<?php while (have_rows('kontakty')) : the_row(); ?>
 			<div class="header_top row">
 				<div class="location col">
 					<div class="tittle">Адрес:</div>
 					<div class="content row">
-						<div class="content_item marker">ул. Конева, 18</div>
-						<div class="content_item marker">ул. Лукашевича, 14/6</div>
+					<?php if (get_sub_field('adres_1')) : ?>
+						<div class="content_item marker"><?= get_sub_field('adres_1') ?></div>
+					<?php endif; ?>
+					<?php if (get_sub_field('adres_2')) : ?>
+						<div class="content_item marker"><?= get_sub_field('adres_2') ?></div>
+					<?php endif; ?>
 					</div>		
 				</div>
 
 				<div class="schedule col">
 					<div class="tittle">Время работы:</div>
 					<div class="content row">
-						<div class="content_item clock">Ежедневно 24 часа</div>
-						<div class="content_item">Перерыв:<br/>01:00 - 04:00 Пн-Чт</div>
+					<?php if (get_sub_field('vremya_raboty')) : ?>
+						<div class="content_item clock"><?= get_sub_field('vremya_raboty') ?></div>
+					<?php endif; ?>
+					<?php if (get_sub_field('primechanie')) : ?>
+						<div class="content_item"><?= get_sub_field('primechanie') ?></div>
+					<?php endif; ?>
 					</div>		
 				</div>
 
 				<div class="contact col">
 					<div class="content">
-						<div class="content_item phone"><a href="tel:+"><span>8 (3812) </span>955-055</a></div>
-						<div class="content_item mail"><a href="mailto:">955055@bk.ru</a></div>
+					<?php if (get_sub_field('telefon')) : ?>
+						<div class="content_item phone"><a href="tel:+"><?= get_sub_field('telefon') ?></a></div>
+					<?php endif; ?>
+					<?php if (get_sub_field('pochta')) : ?>
+						<div class="content_item mail"><a href="mailto:<?= get_sub_field('pochta') ?>`"><?= get_sub_field('pochta') ?></a></div>
+					<?php endif; ?>
 					</div>		
 				</div>
 			</div>
+			<?php endwhile; ?>
 			<nav id="site-navigation" class="main-navigation">
 				<?php
 				wp_nav_menu(

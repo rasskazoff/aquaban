@@ -28,6 +28,9 @@
         z-index: 2
     .row
         padding-top: 60px
+        @media (max-width: 960px)
+            flex-wrap: wrap
+            justify-content: center
     .col
         background: url(../images/tariffs_circle.svg)
         background-size: contain
@@ -38,6 +41,9 @@
         height: 300px
         margin: auto
         display: flex
+        @media (max-width: 960px)
+            width: 100%
+            margin: 10px
         &:nth-last-of-type(3)
             margin-left: 0
         &:nth-last-of-type(1)

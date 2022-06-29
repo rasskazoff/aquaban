@@ -5,12 +5,15 @@
     z-index: 2
     padding-top: 30px
     padding-bottom: 70px
+    *
+        white-space: nowrap
     .header_content
         width: 100%
     .header_top
         margin: 0 -10px
         .content
-            margin-top: -10px 
+            margin-top: -10px
+            flex-wrap: wrap
         .col
             padding: 10px
         .schedule
@@ -40,9 +43,13 @@
                     font-size: $font-xxs
     .site-branding
         padding-right: 50px
+        @media (max-width: 1200px)
+            padding-right: 25px
         img
             max-width: 250px
             padding: 10px
+            @media (max-width: 1200px)
+                max-width: 200px
     .main-navigation
         border-top: 2px solid $orange
         .menu

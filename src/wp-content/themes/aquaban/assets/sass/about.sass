@@ -25,6 +25,16 @@
     .container
         position: relative
         z-index: 2
+        @media (max-width: 960px)
+            .row
+                flex-wrap: wrap
+                justify-content: center
+                .col
+                    text-align: center
+                    .text
+                        padding: 0
+                .video_wrap
+                    margin-top: 40px
         .text_wrap
             margin: auto
         h2
@@ -39,6 +49,7 @@
         background: url(../images/player_bg.png)
         background-repeat: no-repeat
         background-size: cover
+        border-radius: 99%
         .video
             background: url(../images/player.svg)
             background-repeat: no-repeat
