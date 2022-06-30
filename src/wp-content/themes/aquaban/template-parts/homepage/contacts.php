@@ -1,6 +1,8 @@
 <div id="contacts">
     <div class="container">
-        <h2 class="h2">Наши контакты</h2>
+        <?php if (get_field('zagolovok_karta')) : ?>
+            <h2 class="h2"><?= get_field('zagolovok_karta') ?></h2>
+        <?php endif; ?>
         <div class="row">
             <?php while (have_rows('kontakty')) : the_row(); ?>
             <div class="col content">
@@ -47,7 +49,7 @@
 
             <div class="col">
                 <div class="map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad01f83a0b2b09d9401c104d28b1ece0b7c641f176d86f9e64a1867999aa7b9bc&amp;width=auto&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad01f83a0b2b09d9401c104d28b1ece0b7c641f176d86f9e64a1867999aa7b9bc&amp;width=auto&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
                 </div>
             </div>
         </div>

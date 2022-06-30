@@ -1,62 +1,47 @@
 <div id="reviews">
     <div class="container">
-        <h2 class="h2">Отзывы клиентов</h2>
-        <div class="descript">Все отзывы НАСТОЯЩИЕ. Мы не вставляем чужие записи. Любой желающий может оставить отзыв в форме ниже.</div>
+        <?php if (get_field('zagolovok_otzyvy')) : ?>
+            <h2 class="h2"><?= get_field('zagolovok_otzyvy') ?></h2>
+        <?php endif; ?>
+        <?php if (get_field('podzagolovok_otzyvy')) : ?>
+            <div class="descript"><?= get_field('podzagolovok_otzyvy') ?></div>
+        <?php endif; ?>
         <div class="slider">
             <div class="slider__wrapper">
                 <div class="slider__items">
+                    <?php while (have_rows('otzyv_items')) : the_row(); ?>
                     <div class="slider__item">
-                        <!-- Контент 1 слайда -->
                         <div class="reviews_wrap">
+                            <?php while (have_rows('avtor')) : the_row(); ?>
                             <div class="reviews_user row">
-                                <div class="img" style="background: center / cover no-repeat url(<?php echo get_bloginfo('template_url');?>/assets/images/gallery.png);"></div>
+                                <?php if (get_sub_field('foto')) : ?>
+                                <div class="img" style="background: center / cover no-repeat url(<?= get_sub_field('foto') ?>);"></div>
+                                <?php endif; ?>
                                 <div class="col">
-                                    <div class="name">Артем Панч</div>
-                                    <div class="date">24 ноября 2021</div>
+                                    <?php if (get_sub_field('imya')) : ?>
+                                    <div class="name"><?= get_sub_field('imya') ?></div>
+                                    <?php endif; ?>
+                                    <?php if (get_sub_field('data')) : ?>
+                                    <div class="date"><?= get_sub_field('data') ?></div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
-                            <div class="reviews_text">
-                                Помыли действительно быстро и довольно недорого, никаких разводов и неотмытых участков не оставили. спасибо!
-                            </div>
+                            <?php endwhile; ?>
+                            <?php if (get_sub_field('tekst_otzyva')) : ?>
+                            <div class="reviews_text"><?= get_sub_field('tekst_otzyva') ?></div>
+                            <?php endif; ?>
                         </div>
                     </div>
-
-                    <div class="slider__item">
-                        <!-- Контент 1 слайда -->
-                        <div class="reviews_wrap">
-                            <div class="reviews_user">
-                                <div class="img" style="background: center / cover no-repeat url(<?php echo get_bloginfo('template_url');?>/assets/images/gallery.png);"></div>
-                                <div class="name">Артем Панч</div>
-                                <div class="date">24 ноября 2021</div>
-                            </div>
-                            <div class="reviews_text">
-                                Помыли действительно быстро и довольно недорого, никаких разводов и неотмытых участков не оставили. спасибо!
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="slider__item">
-                        <!-- Контент 1 слайда -->
-                        <div class="reviews_wrap">
-                            <div class="reviews_user">
-                                <div class="img" style="background: center / cover no-repeat url(<?php echo get_bloginfo('template_url');?>/assets/images/gallery.png);"></div>
-                                <div class="name">Артем Панч</div>
-                                <div class="date">24 ноября 2021</div>
-                            </div>
-                            <div class="reviews_text">
-                                Помыли действительно быстро и довольно недорого, никаких разводов и неотмытых участков не оставили. спасибо!
-                            </div>
-                        </div>
-                    </div>
+                    <?php endwhile; ?>
 
                 </div>
             </div>
             <a href="#" class="slider__control" data-slide="prev"></a>
             <a href="#" class="slider__control" data-slide="next"></a>
             <ol class="slider__indicators">
-                <li data-slide-to="0"></li>
-                <li data-slide-to="1"></li>
-                <li data-slide-to="2"></li>
+                <?php while (have_rows("otzyv_items")) : the_row(); ?>
+                        <li data-slide-to="<?= get_row_index()-1; ?>"></li>                  
+                <?php endwhile; ?>
             </ol>
         </div>
         <script>

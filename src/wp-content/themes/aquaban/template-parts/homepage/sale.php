@@ -1,39 +1,28 @@
 <div id="sale">
     <div class="container">
-        <h2 class="h2">Акции</h2>
+        <?php if (get_field('zagolovok_akczii')) : ?>
+            <h2 class="h2"><?= get_field('zagolovok_akczii') ?></h2>
+        <?php endif; ?>
         <div class="slider">
         <div class="slider__wrapper">
             <div class="slider__items">
-            <div class="slider__item">
-                <!-- Контент 1 слайда -->
-                <img src="<?php echo get_bloginfo('template_url');?>/assets/images/gallery.png" alt="">
-            </div>
-            <div class="slider__item">
-                <!-- Контент 2 слайда -->
-                <img src="<?php echo get_bloginfo('template_url');?>/assets/images/gallery.png" alt="">
-            </div>
-            <div class="slider__item">
-                <!-- Контент 3 слайда -->
-                <img src="<?php echo get_bloginfo('template_url');?>/assets/images/gallery.png" alt="">
-            </div>
-            <div class="slider__item">
-                <!-- Контент 4 слайда -->
-                <img src="<?php echo get_bloginfo('template_url');?>/assets/images/gallery.png" alt="">
-            </div>
-            <div class="slider__item">
-                <!-- Контент 5 слайда -->
-                <img src="<?php echo get_bloginfo('template_url');?>/assets/images/gallery.png" alt="">
-            </div>
+
+                <?php while (have_rows("slider")) : the_row(); ?>
+                    <div class="slider__item">
+                        <?php if (get_sub_field('slide')) : ?>
+                                <img src="<?= get_sub_field("slide") ?>" alt="">                        
+                        <?php endif; ?>
+                    </div>
+                <?php endwhile; ?>
+
             </div>
         </div>
         <a href="#" class="slider__control" data-slide="prev"></a>
         <a href="#" class="slider__control" data-slide="next"></a>
         <ol class="slider__indicators">
-            <li data-slide-to="0"></li>
-            <li data-slide-to="1"></li>
-            <li data-slide-to="2"></li>
-            <li data-slide-to="3"></li>
-            <li data-slide-to="4"></li>
+            <?php while (have_rows("slider")) : the_row(); ?>
+                    <li data-slide-to="<?= get_row_index()-1; ?>"></li>                  
+            <?php endwhile; ?>
         </ol>
         </div>
         <script>

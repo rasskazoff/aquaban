@@ -28,6 +28,6 @@
         </div>
     </div>
     <div class="transition">
-        <a href="#"><img src="<?php echo get_bloginfo('template_url');?>/assets/images/arrow.svg" alt="arrow"></a>
+        <a href="#online"><img src="<?php echo get_bloginfo('template_url');?>/assets/images/arrow.svg" alt="arrow"></a>
     </div>
 </div><!--end join-->

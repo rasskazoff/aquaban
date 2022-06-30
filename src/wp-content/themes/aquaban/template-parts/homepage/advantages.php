@@ -2,30 +2,45 @@
     <div class="glow"></div>
     <div class="glow"></div>
     <div class="container">
-        <h2 class="h2">В Аквабане быстро, удобно и выгодно</h2>
+        <?php if (get_field('zagolovok_advantages')) : ?>
+            <h2 class="h2"><?= get_field('zagolovok_advantages') ?></h2>
+        <?php endif; ?>
+        <?php while (have_rows('preimushhestva')) : the_row(); ?>
         <div class="row">
             <div class="col items">
 
+                <?php while (have_rows('preimushhestvo-1')) : the_row(); ?>
+                <?php if (get_sub_field('tekst')) : ?>
                 <div class="item">
                     <div class="num">01</div>
                     <div class="text">
-                        Защита кузова тефлоновым покрытием
+                        <?= get_sub_field('tekst') ?>
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php endwhile; ?>
 
+                <?php while (have_rows('preimushhestvo-2')) : the_row(); ?>
+                <?php if (get_sub_field('tekst')) : ?>
                 <div class="item">
                     <div class="num">02</div>
                     <div class="text">
-                        Чистый автомобиль за 5 минут
+                        <?= get_sub_field('tekst') ?>
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php endwhile; ?>
 
+                <?php while (have_rows('preimushhestvo-3')) : the_row(); ?>
+                <?php if (get_sub_field('tekst')) : ?>
                 <div class="item">
                     <div class="num">03</div>
                     <div class="text">
-                        Бесплатное покрытие воском для каждого клиента
+                        <?= get_sub_field('tekst') ?>
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php endwhile; ?>
 
             </div>
             <div class="col image">
@@ -33,28 +48,41 @@
             </div>
             <div class="col items">
 
+                <?php while (have_rows('preimushhestvo-4')) : the_row(); ?>
+                <?php if (get_sub_field('tekst')) : ?>
                 <div class="item">
                     <div class="num">04</div>
                     <div class="text">
-                        Качественная американская химия SIMONIZ
+                        <?= get_sub_field('tekst') ?>
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php endwhile; ?>
 
+                <?php while (have_rows('preimushhestvo-5')) : the_row(); ?>
+                <?php if (get_sub_field('tekst')) : ?>
                 <div class="item">
                     <div class="num">05</div>
                     <div class="text">
-                        Арки высокого давления
+                        <?= get_sub_field('tekst') ?>
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php endwhile; ?>
 
+                <?php while (have_rows('preimushhestvo-6')) : the_row(); ?>
+                <?php if (get_sub_field('tekst')) : ?>
                 <div class="item">
                     <div class="num">06</div>
                     <div class="text">
-                        Цена от 400 рублей
+                        <?= get_sub_field('tekst') ?>
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php endwhile; ?>
 
             </div>
         </div>
+        <?php endwhile; ?>
     </div>
 </div>
