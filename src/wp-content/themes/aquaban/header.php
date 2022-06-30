@@ -47,6 +47,15 @@
 				<p class="site-description"><?php echo $aquaban_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
+		
+	<div id="burger">
+	<input type="checkbox" id="menu_checkbox">
+	<label for="menu_checkbox">
+		<div></div>
+		<div></div>
+		<div></div>
+	</label>
+
 		<div class="header_content">
 			<?php while (have_rows('kontakty')) : the_row(); ?>
 			<div class="header_top row">
@@ -77,7 +86,7 @@
 				<div class="contact col">
 					<div class="content">
 					<?php if (get_sub_field('telefon')) : ?>
-						<div class="content_item phone"><a href="tel:+"><?= get_sub_field('telefon') ?></a></div>
+						<div class="content_item phone"><a href="tel:<?php echo preg_replace('/[^0-9]/', '', get_sub_field('telefon')); ?>"><?= get_sub_field('telefon')?></a></div>
 					<?php endif; ?>
 					<?php if (get_sub_field('pochta')) : ?>
 						<div class="content_item mail"><a href="mailto:<?= get_sub_field('pochta') ?>`"><?= get_sub_field('pochta') ?></a></div>
@@ -86,6 +95,7 @@
 				</div>
 			</div>
 			<?php endwhile; ?>
+			
 			<nav id="site-navigation" class="main-navigation">
 				<?php
 				wp_nav_menu(
@@ -96,5 +106,8 @@
 				);
 				?>
 			</nav><!-- #site-navigation -->
+
+			
 		</div>
+	</div>
 	</header><!-- #masthead -->

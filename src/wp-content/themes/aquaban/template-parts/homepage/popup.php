@@ -11,7 +11,7 @@
                 <?php while (have_rows('video_items')) : the_row(); ?>
                 <?php if (get_sub_field('video_item')) : ?>
                 <div class="col">
-                    <div class="video">
+                    <div class="video" loading="lazy">
                         <?= get_sub_field('video_item') ?>
                     </div>
                 </div>

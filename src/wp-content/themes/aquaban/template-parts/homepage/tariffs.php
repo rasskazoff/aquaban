@@ -9,7 +9,7 @@
             <?php while (have_rows('paket_1')) : the_row(); ?>
             <div class="col">
                 <div class="content">
-                    <img src="<?php echo get_bloginfo('template_url');?>/assets/images/tariff-1.svg" alt="">
+                    <img loading="lazy" src="<?php echo get_bloginfo('template_url');?>/assets/images/tariff-1.svg" alt="">
                     <?php if (get_sub_field('nazvanie')) : ?>
                         <div class="name"><?= get_sub_field('nazvanie') ?></div>
                     <?php endif; ?>
@@ -23,7 +23,7 @@
             <?php while (have_rows('paket_2')) : the_row(); ?>
             <div class="col">
                 <div class="content">
-                    <img src="<?php echo get_bloginfo('template_url');?>/assets/images/tariff-2.svg" alt="">
+                    <img loading="lazy" src="<?php echo get_bloginfo('template_url');?>/assets/images/tariff-2.svg" alt="">
                     <?php if (get_sub_field('nazvanie')) : ?>
                         <div class="name"><?= get_sub_field('nazvanie') ?></div>
                     <?php endif; ?>
@@ -37,7 +37,7 @@
             <?php while (have_rows('paket_3')) : the_row(); ?>
             <div class="col">
                 <div class="content">
-                    <img src="<?php echo get_bloginfo('template_url');?>/assets/images/tariff-3.svg" alt="">
+                    <img loading="lazy" src="<?php echo get_bloginfo('template_url');?>/assets/images/tariff-3.svg" alt="">
                     <?php if (get_sub_field('nazvanie')) : ?>
                         <div class="name"><?= get_sub_field('nazvanie') ?></div>
                     <?php endif; ?>

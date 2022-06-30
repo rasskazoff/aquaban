@@ -2,9 +2,11 @@
 
 .header
     position: relative
-    z-index: 2
+    z-index: 3
     padding-top: 30px
     padding-bottom: 70px
+    @media (max-width: 960px)
+        padding-bottom: 20px
     *
         white-space: nowrap
     .header_content
@@ -32,6 +34,8 @@
             &:nth-child(odd)
                 padding-right: 25px           
                 padding-top: 20px
+                @media (max-width: 960px)
+                    padding-right: 0
         .contact
             .content_item
                 padding-right: 0
@@ -58,15 +62,18 @@
             li
                 margin: auto
                 padding: 10px
+                @media (max-width: 960px)
+                    padding: 10px 0
                 &:first-child
-                    margin-left: 0
+                    border-bottom: 4px solid $blue
+                    padding: 5px 0
+                    margin: 5px
+                    margin-left: 10px
+                    a
+                        font-weight: 700
                 &:last-child
                     margin-right: 0
                 a
                     font-size: $font-xs
                     font-weight: 500
                     color: $black
-                    &:active
-                        font-weight: 700
-                        border-bottom: 4px solid $blue
-                        padding: 5px 0

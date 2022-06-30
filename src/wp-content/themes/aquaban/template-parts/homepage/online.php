@@ -23,8 +23,8 @@
                 <?php if (get_sub_field('nazvanie_vkladki_1')) : ?>
                     <label for="tab-btn-1" class="marker active"><?= get_sub_field('nazvanie_vkladki_1') ?></label> 
                 <?php endif; ?>
-                <?php if (get_sub_field('nazvanie_vkladki_1')) : ?>
-                    <label for="tab-btn-2" class="marker"><?= get_sub_field('nazvanie_vkladki_1') ?></label>
+                <?php if (get_sub_field('nazvanie_vkladki_2')) : ?>
+                    <label for="tab-btn-2" class="marker"><?= get_sub_field('nazvanie_vkladki_2') ?></label>
                 <?php endif; ?>
             </div>
 

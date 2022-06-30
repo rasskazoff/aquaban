@@ -1,0 +1,57 @@
+.fadeUp
+  animation-name: fadeUp
+  animation-duration: 1000ms
+  animation-delay: 0ms
+  animation-fill-mode: forwards
+  animation-timing-function: linear
+  animation-iteration-count: 1
+  transform-origin: 0 0
+  position: absolute
+  z-index: 2
+  margin-top: 50px
+  margin-left: -50px
+  max-width: fit-content
+  @media (max-width: 960px)
+    max-width: 550px
+    margin-top: 30px
+    margin-left: -40px
+    @media (max-width: 640px)
+      max-width: 450px
+      margin-top: 20px
+      margin-left: -30px
+      @media (max-width: 480px)
+        max-width: 320px
+        margin-left: -20px
+
+@keyframes fadeUp
+  0%
+    transform: translate(140px, 200px) rotate(355deg)
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75)
+
+  100%
+    transform: translate(0,0) rotate(360deg)
+
+.fadeIn
+  animation-name: fadeIn
+  animation-duration: 500ms
+  animation-delay: 800ms
+  animation-fill-mode: forwards
+  animation-timing-function: linear
+  animation-iteration-count: 1
+  transform-origin: center
+  transform: rotateZ(-45deg) scale(0)
+  max-width: fit-content
+  @media (max-width: 960px)
+    max-width: 500px
+    @media (max-width: 640px)
+      max-width: 400px
+      @media (max-width: 480px)
+        max-width: 300px
+
+@keyframes fadeIn
+  0%
+    transform: rotateZ(-45deg) scale(0)
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75)
+
+  100%
+    transform: rotateZ(0deg) scale(1)

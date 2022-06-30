@@ -10,7 +10,7 @@
                 <?php while (have_rows("slider")) : the_row(); ?>
                     <div class="slider__item">
                         <?php if (get_sub_field('slide')) : ?>
-                                <img src="<?= get_sub_field("slide") ?>" alt="">                        
+                                <img loading="lazy" src="<?= get_sub_field("slide") ?>" alt="">                        
                         <?php endif; ?>
                     </div>
                 <?php endwhile; ?>

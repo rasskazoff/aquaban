@@ -16,6 +16,9 @@
                     <div class="text">
                         <?= get_sub_field('tekst') ?>
                     </div>
+                    <div class="content">
+                        <?= get_sub_field('podrobnee') ?>
+                    </div>
                 </div>
                 <?php endif; ?>
                 <?php endwhile; ?>
@@ -26,6 +29,9 @@
                     <div class="num">02</div>
                     <div class="text">
                         <?= get_sub_field('tekst') ?>
+                    </div>
+                    <div class="content">
+                        <?= get_sub_field('podrobnee') ?>
                     </div>
                 </div>
                 <?php endif; ?>
@@ -38,13 +44,16 @@
                     <div class="text">
                         <?= get_sub_field('tekst') ?>
                     </div>
+                    <div class="content">
+                        <?= get_sub_field('podrobnee') ?>
+                    </div>
                 </div>
                 <?php endif; ?>
                 <?php endwhile; ?>
 
             </div>
             <div class="col image">
-                <img src="<?php echo get_bloginfo('template_url');?>/assets/images/car2.svg" alt="">
+                <img loading="lazy" src="<?php echo get_bloginfo('template_url');?>/assets/images/car2.png" alt="">
             </div>
             <div class="col items">
 
@@ -54,6 +63,9 @@
                     <div class="num">04</div>
                     <div class="text">
                         <?= get_sub_field('tekst') ?>
+                    </div>
+                    <div class="content">
+                        <?= get_sub_field('podrobnee') ?>
                     </div>
                 </div>
                 <?php endif; ?>
@@ -66,6 +78,9 @@
                     <div class="text">
                         <?= get_sub_field('tekst') ?>
                     </div>
+                    <div class="content">
+                        <?= get_sub_field('podrobnee') ?>
+                    </div>
                 </div>
                 <?php endif; ?>
                 <?php endwhile; ?>
@@ -76,6 +91,9 @@
                     <div class="num">06</div>
                     <div class="text">
                         <?= get_sub_field('tekst') ?>
+                    </div>
+                    <div class="content">
+                        <?= get_sub_field('podrobnee') ?>
                     </div>
                 </div>
                 <?php endif; ?>

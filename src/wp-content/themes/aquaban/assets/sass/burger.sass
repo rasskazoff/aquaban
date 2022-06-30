@@ -1,0 +1,101 @@
+@import settings.sass
+
+.noscroll
+    overflow: hidden
+#burger
+    #menu_checkbox
+        display: none
+@media (min-width: 961px)
+    label[for="menu_checkbox"]
+        display: none!important
+
+@media (max-width: 960px)
+    .header
+        padding-top: 5px !important
+        padding-left: 5px !important
+        .site-branding img
+            max-width: 200px
+            object-fit: contain
+            object-position: left
+            height: 70px
+    .header_content
+        display: none
+#burger
+    label
+        position: absolute
+        top: 20px
+        right: 20px
+        display: block
+        width: 30px
+        height: 30px
+        cursor: pointer
+        z-index: 99
+        div
+            position: relative
+            top: 0
+            height: 6px
+            background-color: $blue
+            margin-bottom: 6px
+            transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right
+            border-radius: 5px
+
+            &:first-child
+                transform-origin: 0
+
+            &:last-child
+                margin-bottom: 0
+                transform-origin: 30px
+
+            &:nth-child(2)
+                right: 0
+                width: 30px
+    #menu_checkbox:checked + label
+        position: fixed
+        top: 65px
+        right: 20px
+        div
+            &:first-child
+                top: -3px
+                transform: rotateZ(45deg)
+
+            &:last-child
+                top: 3px
+                transform: rotateZ(45deg)
+
+            &:nth-child(2)
+                width: 42.5px
+                top: 0
+                right: 6.5px
+                transform: rotateZ(-45deg)
+    #menu_checkbox:checked ~ .header_content
+        position: fixed
+        right: 0
+        top: 0
+        height: 100vh
+        width: 100%
+        background: rgba(255, 255, 255, 0.90)
+        text-align: center
+        padding: 70px 0
+        overflow-y: scroll
+        display: grid
+        backdrop-filter: blur(5px)
+        justify-content: center
+        *
+            font-size: $font-l
+            align-self: center
+        .row
+            display: block
+            .col
+                width: 100%
+        .header_top
+            margin-bottom: auto
+            order: 2
+        .main-navigation
+            order: 1
+            border: none
+            margin: 50px
+            .menu
+                display: block
+                text-align: center
+    .contact .content_item
+        text-align: center

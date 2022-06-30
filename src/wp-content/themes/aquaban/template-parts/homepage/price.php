@@ -8,7 +8,7 @@
             <?php while (have_rows('tarif_1')) : the_row(); ?>
             <div class="col">
                 <div class="image">
-                    <img src="<?php echo get_bloginfo('template_url');?>/assets/images/econom.svg" alt="">
+                    <img loading="lazy" src="<?php echo get_bloginfo('template_url');?>/assets/images/econom.svg" alt="">
                 </div>
                 <div class="tittle">
                     <?php if (get_sub_field('nazvanie_1')) : ?>
@@ -27,7 +27,7 @@
             <?php while (have_rows('tarif_2')) : the_row(); ?>
             <div class="col">
                 <div class="image">
-                    <img src="<?php echo get_bloginfo('template_url');?>/assets/images/standart.svg" alt="">
+                    <img loading="lazy" src="<?php echo get_bloginfo('template_url');?>/assets/images/standart.svg" alt="">
                 </div>
                 <div class="tittle">
                     <?php if (get_sub_field('nazvanie_1')) : ?>
@@ -46,7 +46,7 @@
             <?php while (have_rows('tarif_3')) : the_row(); ?>
             <div class="col">
                 <div class="image">
-                    <img src="<?php echo get_bloginfo('template_url');?>/assets/images/maximum.svg" alt="">
+                    <img loading="lazy" src="<?php echo get_bloginfo('template_url');?>/assets/images/maximum.svg" alt="">
                 </div>
                 <div class="tittle">
                     <?php if (get_sub_field('nazvanie_1')) : ?>
@@ -64,7 +64,7 @@
 
             <div class="col dop">
                 <div class="image">
-                    <img src="<?php echo get_bloginfo('template_url');?>/assets/images/dop.svg" alt="">
+                    <img loading="lazy" src="<?php echo get_bloginfo('template_url');?>/assets/images/dop.svg" alt="">
                 </div>
                 <div class="tittle">
                     ДОП. УСЛУГИ

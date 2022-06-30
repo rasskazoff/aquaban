@@ -1,11 +1,10 @@
 @import settings.sass
 
 .join
-    overflow: hidden
     position: relative
     &::before
         content: ""
-        background: url(../images/main-cover.svg)
+        background: url(../images/main-cover.png)
         background-repeat: no-repeat
         background-size: cover
         position: absolute
@@ -15,72 +14,74 @@
         z-index: 1
     .glow
         &:nth-of-type(1)
-            width: 277px
-            height: 193px
-            left: -87px
+            left: 0
             top: -80px
-            background: rgba(0, 175, 234, 0.6)
-            filter: blur(140px)
-            border-radius: 280px
+            content: url(../images/glow1.svg)
         &:nth-of-type(2)
-            width: 251px
-            height: 321px
-            left: -78px
+            left: 0
             top: 374px
-            background: rgba(0, 175, 234, 0.75)
-            filter: blur(150px)
-            border-radius: 300px
+            content: url(../images/glow2.svg)
         &:nth-of-type(3)
-            width: 214px
-            height: 145px
-            right: -85px
+            right: 0
             top: 164px
-            background: rgba(248, 156, 28, 0.55)
-            filter: blur(100px)
-            border-radius: 200px
+            content: url(../images/glow3.svg)
         &:nth-of-type(4)
-            width: 278px
-            height: 294px
-            right: -50px
+            right: 0
             top: 416px
-            background: rgba(248, 156, 28, 0.6)
-            filter: blur(175px)
-            border-radius: 350px
+            content: url(../images/glow4.svg)
+    &::after 
+        content: ''
+        height: 160px        
+        width: 100%
+        display: block
+        background: linear-gradient(180deg, #FCFCFC 0%, rgba(252, 252, 252, 0) 100%)
+        transform: rotate(-180deg)
+        position: absolute
+        bottom: 0
+        z-index: 1
+
 #main
     position: relative
     z-index: 2
     .container
-        @media (max-width: 1200px)
-        flex-wrap: wrap-reverse
+        @media (max-width: 960px)
+            flex-wrap: wrap-reverse
+            h1
+                padding: 10px 0
         >.col
             width: 50%
             padding-right: 50px
-            @media (max-width: 1200px)
+            position: relative
+            @media (max-width: 960px)
                 width: 100%
-                padding-right: 10px
+                padding-right: 0
                 text-align: center
                 text-align: -webkit-center
             .description
                 font-size: $font-l
                 color: $gray
                 padding-bottom: 40px
+                @media (max-width: 960px)
+                    padding-bottom: 10px
+                    font-size: ($font-l - 2)
             .btn
                 margin-right: 20px
                 white-space: nowrap
-                @media (max-width: 1200px)
+                @media (max-width: 960px)
                     margin: 10px
             >.row
                 padding: 10px 0
                 margin-left: -10px
-                flex-wrap: wrap
-                justify-content: center
+                @media (max-width: 960px)
+                    padding: 10px
+                    margin-left: 0
+                    flex-wrap: wrap
+                    justify-content: center
 .transition
     width: 100%
     padding-top: 50px
     padding-bottom: 20px
     text-align: center
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FCFCFC 100%)
-    background-repeat: no-repeat
-    background-size: cover
     position: relative
-    z-index: 1
+    z-index: 2
+

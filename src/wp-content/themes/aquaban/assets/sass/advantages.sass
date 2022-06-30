@@ -6,31 +6,64 @@
     background-size: cover
     padding: 90px 0
     position: relative
+    @media (max-width: 640px)
+        padding: 30px 0
+    .container
+        position: relative
+        z-index: 2
+    &::before
+        content: ''
+        height: 160px        
+        width: 100%
+        display: block
+        background: linear-gradient(180deg, #FCFCFC 0%, rgba(252, 252, 252, 0) 100%)
+        position: absolute
+        top: 0
+    &::after 
+        content: ''
+        height: 160px        
+        width: 100%
+        display: block
+        background: linear-gradient(180deg, #FCFCFC 0%, rgba(252, 252, 252, 0) 100%)
+        transform: rotate(-180deg)
+        position: absolute
+        bottom: 0
     .glow
         &:nth-of-type(1)
-            width: 272px
-            height: 295px
-            left: -176px
+            left: 0
             top: 140px
-            background: rgba(0, 175, 234, 0.6)
-            border-radius: 300px
-            filter: blur(150px)
+            content: url(../images/glow7.svg)
         &:nth-of-type(2)
-            width: 256px
-            height: 173px
-            right: -100px
+            right: 0
             top: 580px
-            background: rgba(248, 156, 28, 0.55)
-            filter: blur(125px)
-            border-radius: 250px
+            content: url(../images/glow8.svg)
     h2
         padding-bottom: 30px
     .items
         width: 25%
-        margin: auto 0
         margin: 60px 0
         .item
             padding: 20px 0
+            position: relative
+            .content
+                display: none
+                position: absolute
+                background: $white
+                padding: 15px
+                z-index: 4
+                &::before
+                    content: ""
+                    position: absolute
+                    inset: 0
+                    border-radius: 10px
+                    padding: 2px
+                    background: linear-gradient(#00AFEA, #0D4477)
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+                    -webkit-mask-composite: xor
+                    mask-composite: exclude
+            &:hover
+                .content
+                    display: block
             .num
                 color: #ddd
                 font-weight: 900
@@ -40,6 +73,10 @@
                 font-size: $font-m
                 &::before
                     content: url(../images/item.svg)
+        @media (max-width: 640px)
+            margin: 20px 0
+            .item
+                padding: 10px 0
     .image
         width: 50%
         img

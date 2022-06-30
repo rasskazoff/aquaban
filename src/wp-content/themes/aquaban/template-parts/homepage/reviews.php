@@ -15,7 +15,7 @@
                             <?php while (have_rows('avtor')) : the_row(); ?>
                             <div class="reviews_user row">
                                 <?php if (get_sub_field('foto')) : ?>
-                                <div class="img" style="background: center / cover no-repeat url(<?= get_sub_field('foto') ?>);"></div>
+                                <div loading="lazy" class="img" style="background: center / cover no-repeat url(<?= get_sub_field('foto') ?>);"></div>
                                 <?php endif; ?>
                                 <div class="col">
                                     <?php if (get_sub_field('imya')) : ?>

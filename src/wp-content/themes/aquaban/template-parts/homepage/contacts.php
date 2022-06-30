@@ -9,7 +9,7 @@
                 <div class="contact">
                 <?php if (get_sub_field('telefon')) : ?>
                     <div class="phone">
-                        <a href="tel:"><?= get_sub_field('telefon') ?></a>
+                        <a href="tel:<?php echo preg_replace('/[^0-9]/', '', get_sub_field('telefon')); ?>"><?= get_sub_field('telefon') ?></a>
                     </div>
                 <?php endif; ?>
                 <?php if (get_sub_field('pochta')) : ?>
@@ -49,7 +49,7 @@
 
             <div class="col">
                 <div class="map">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad01f83a0b2b09d9401c104d28b1ece0b7c641f176d86f9e64a1867999aa7b9bc&amp;width=auto&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                    <script type="text/javascript" charset="utf-8" async loading="lazy" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad01f83a0b2b09d9401c104d28b1ece0b7c641f176d86f9e64a1867999aa7b9bc&amp;width=auto&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
                 </div>
             </div>
         </div>
