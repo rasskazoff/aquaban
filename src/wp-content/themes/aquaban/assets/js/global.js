@@ -21,4 +21,18 @@ document.addEventListener('DOMContentLoaded', function(){
     for(i=0; i<menu_link.length; i++){
         menu_link[i].addEventListener("click", hide_menu);
         }
+
+    //Фикс меню
+    let mainH = document.querySelector('#main').offsetHeight
+    let header = document.querySelector('#masthead')
+
+    window.addEventListener('scroll', function(e) {
+    if(window.scrollY>mainH){
+        header.classList.add('fixed')
+    }
+        else{
+            header.classList.remove('fixed')
+        }
+    })
+
 })
