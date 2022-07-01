@@ -11,6 +11,7 @@
   margin-top: 50px
   margin-left: -50px
   max-width: fit-content
+  animation-direction: alternate
   @media (max-width: 960px)
     max-width: 550px
     margin-top: 30px
@@ -41,6 +42,7 @@
   transform-origin: center
   transform: rotateZ(-45deg) scale(0)
   max-width: fit-content
+  animation-direction: alternate
   @media (max-width: 960px)
     max-width: 500px
     @media (max-width: 640px)
@@ -64,9 +66,79 @@
   animation-timing-function: linear
   animation-iteration-count: 1
   transform-origin: center
+  animation-direction: alternate
 @keyframes fadeDown
   0%
     transform: translate(0, -100px)
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75)
+
+  100%
+    transform: translate(0, 0)
+
+.popup_container
+  animation-name: zoom
+  animation-duration: 100ms
+  animation-delay: 0
+  animation-fill-mode: forwards
+  animation-timing-function: linear
+  animation-iteration-count: 1
+  transform-origin: 0 0
+  animation-direction: alternate
+@keyframes zoom
+  0%
+    transform: scale(0) translate(-50%,-50%)
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75)
+
+  100%
+    transform: scale(1) translate(-50%,-50%)
+
+
+#about .video_wrap .video, #advantages .image img, #tariffs .col
+  animation-name: zoomW
+  animation-duration: 2000ms
+  animation-delay: 0
+  animation-fill-mode: forwards
+  animation-timing-function: linear
+  animation-iteration-count: infinite
+  transform-origin: center
+  animation-direction: alternate
+@keyframes zoomW
+  0%
+    transform: scale(0.95)
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75)
+
+  100%
+    transform: scale(1.0)
+#price .row .col:hover
+  animation-name: zoomH
+  animation-duration: 100ms
+  animation-delay: 0
+  animation-fill-mode: forwards
+  animation-timing-function: linear
+  animation-iteration-count: 1
+  transform-origin: center
+  animation-direction: alternate
+@keyframes zoomH
+  0%
+    transform: scale(1)
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75)
+
+  100%
+    transform: scale(1.05)
+
+//Появление при скроле 
+.h2.anim
+  animation-name: fadeInR
+  animation-duration: 100ms
+  animation-delay: 0
+  animation-fill-mode: forwards
+  animation-timing-function: linear
+  animation-iteration-count: 1
+  transform-origin: center
+  animation-direction: alternate
+@keyframes fadeInR
+  0%
+    transform: translate(-100px, 0)
     animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75)
 
   100%

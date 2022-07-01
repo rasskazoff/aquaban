@@ -35,4 +35,22 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
 
+//Анимация при скролле
+    const observer = new IntersectionObserver(entries => {
+        // перебор записей
+        entries.forEach(entry => {
+        // если элемент появился
+            if (entry.isIntersecting) {
+                // добавить ему CSS-класс
+                entry.target.classList.add('anim');
+            }
+        });
+    });
+
+    h2 = document.querySelectorAll('.h2')
+    
+    for(i=0; i<h2.length; i++){
+        observer.observe(h2[i]);
+        }
+
 })
