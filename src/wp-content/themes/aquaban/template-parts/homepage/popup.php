@@ -37,7 +37,9 @@
             </div>
             <div class="popup_content-wrap">
                 <div class="line"></div>
-                <div class="sub_tittle">При предоплате 10 моек по программе «ЭКОНОМ»</div>
+                <?php if (get_sub_field('nazvanie')) : ?>
+                <div class="sub_tittle">При предоплате 10 моек по программе <?= get_sub_field('nazvanie') ?></div>
+                <?php endif; ?>
             <?php if (get_sub_field('podrobnee')) : ?>
             <div class="descript"><?= get_sub_field('podrobnee') ?></div>
             <?php endif; ?>
@@ -56,7 +58,9 @@
             </div>
             <div class="popup_content-wrap">
                 <div class="line"></div>
-                <div class="sub_tittle">При предоплате 10 моек по программе «ЭКОНОМ»</div>
+                <?php if (get_sub_field('nazvanie')) : ?>
+                <div class="sub_tittle">При предоплате 10 моек по программе <?= get_sub_field('nazvanie') ?></div>
+                <?php endif; ?>
             <?php if (get_sub_field('podrobnee')) : ?>
             <div class="descript"><?= get_sub_field('podrobnee') ?></div>
             <?php endif; ?>
@@ -75,7 +79,9 @@
             </div>
             <div class="popup_content-wrap">
                 <div class="line"></div>
-                <div class="sub_tittle">При предоплате 10 моек по программе «ЭКОНОМ»</div>
+                <?php if (get_sub_field('nazvanie')) : ?>
+                <div class="sub_tittle">При предоплате 10 моек по программе <?= get_sub_field('nazvanie') ?></div>
+                <?php endif; ?>
             <?php if (get_sub_field('podrobnee')) : ?>
             <div class="descript"><?= get_sub_field('podrobnee') ?></div>
             <?php endif; ?>

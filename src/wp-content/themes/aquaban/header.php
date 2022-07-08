@@ -22,9 +22,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="loader">
-	<div class="loader">loading</div>
-</div>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 <div class="join">

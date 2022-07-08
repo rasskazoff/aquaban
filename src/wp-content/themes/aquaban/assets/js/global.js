@@ -53,7 +53,3 @@ document.addEventListener('DOMContentLoaded', function(){
         observer.observe(h2[i]);
         }
 })
-window.onload = function(){
-    document.querySelector('#loader').remove()
-    document.querySelector('body').classList.add('ready')
-}

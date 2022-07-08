@@ -2,6 +2,9 @@
 
 .join
     position: relative
+    min-height: 775px
+    @media (max-width: 960px)
+        min-height: 600px
     &::before
         content: ""
         background: url(../images/main-cover.png)
@@ -84,4 +87,5 @@
     text-align: center
     position: relative
     z-index: 2
+    min-height: 95px
 
