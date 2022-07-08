@@ -23,13 +23,13 @@
                 </div>
             </div>
             <div class="col">
-                <img loading="lazy" class="fadeUp" src="<?php echo get_bloginfo('template_url');?>/assets/images/main.png" alt="img">
-                <img loading="lazy" class="fadeIn" src="<?php echo get_bloginfo('template_url');?>/assets/images/main-2.png" alt="img">
+                <img class="fadeUp" src="<?php echo get_bloginfo('template_url');?>/assets/images/main.png" alt="img">
+                <img class="fadeIn" src="<?php echo get_bloginfo('template_url');?>/assets/images/main-2.png" alt="img">
             </div>
         </div>
     </div>
     <div class="transition">
-        <a href="#online"><img loading="lazy" src="<?php echo get_bloginfo('template_url');?>/assets/images/arrow.svg" alt="arrow"></a>
+        <a href="#online"><img src="<?php echo get_bloginfo('template_url');?>/assets/images/arrow.svg" alt="arrow"></a>
     </div>
 
 </div><!--end join-->

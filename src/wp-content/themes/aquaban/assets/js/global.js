@@ -52,5 +52,8 @@ document.addEventListener('DOMContentLoaded', function(){
     for(i=0; i<h2.length; i++){
         observer.observe(h2[i]);
         }
-
 })
+window.onload = function(){
+    document.querySelector('#loader').remove()
+    document.querySelector('body').classList.add('ready')
+}

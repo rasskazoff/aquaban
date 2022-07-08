@@ -7,7 +7,8 @@
         display: block    
 #popup
     display: none
-    background: rgba(0, 175, 234, 0.7)
+    background: rgba(34, 34, 34, 0.7)
+    backdrop-filter: blur(5px)
     position: fixed
     top: 0
     left: 0
@@ -24,32 +25,78 @@
         width: fit-content
         text-align: center
         background: #fcfcfc
-        padding: 50px
         border-radius: 20px
+        margin: 50px 50px 50px 0px
         @media (max-width: 960px)
-            max-width: 100%
-        @media (max-width: 640px)
+            width: 100%
             min-height: 100%
             border-radius: 0
             top: 0
-            transform: translateX(-50%)
+            left: 0
+            transform: none
+            margin: 0
+            display: flex
+            overflow: hidden
+
         .close
             position: absolute
-            top: 20px
-            right: 20px
+            top: -20px
+            right: -20px
             cursor: pointer
+            height: 50px
+            width: 50px
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #fff
+            border-radius: 99%
+            @media (max-width: 960px)
+                top: 20px
+                right: 20px
             &::before
                 content: url(../images/close.svg)
-        h2
-            padding-bottom: 30px
+                margin: 0
+                margin-bottom: -2px
+        h3
+            margin: auto
+            font-size: 48px
+            padding: 30px 0
+            @media (max-width: 640px)
+                font-size: 38px
     .popup_content
         display: none
         &.show
             display: block
+        .popup_content-header
+            background: url(../images/popup-bg.png)
+            background-size: cover
+            padding: 50px
+            border-radius: 20px 20px 0 0
+            @media (max-width: 960px)
+                border-radius: 0
+            @media (max-width: 640px)
+                padding: 50px 20px
+        .popup_content-wrap
+            background: url(../images/popup-bg1.png)
+            background-size: cover
+            padding: 50px 
+            border-radius: 0 0 20px 20px
+            min-height: 100%
+            @media (max-width: 960px)
+                border-radius: 0
+            @media (max-width: 640px)
+                padding: 50px 20px
+            .line
+                width: 100px
+                height: 5px
+                background: #00afea
+                margin: -15px auto 15px
     //Видео
     .video_wrap
         margin-left: -20px
         margin-right: -20px
+        justify-content: center
+        flex-wrap: wrap
         @media (max-width: 960px)
                 flex-wrap: wrap
         .col
@@ -58,42 +105,63 @@
             border-radius: 10px
             overflow: hidden
             display: flex
-            iframe
-                width: 100%
+            width: 100%
+            height: auto
+            min-height: 170px
+            border-radius: 10px
+            .wp-video
+                max-width: calc( (1000px - (20px * 2)) / 2  )
                 height: auto
                 min-height: 170px
-                border-radius: 10px
+                @media (max-width: 640px)
+                    max-width: calc( (100vw - (20px * 2))  )
+                video
+                    border-radius: 10px
+                    width: 100%
+                    object-fit: cover
     //пакеты
     .tariff1, .tariff2, .tariff3
         h3
-            padding-bottom: 50px
             @media (max-width: 960px)
                 display: block
                 justify-content: center
                 margin: 0 auto
-            &::before
+        .sub_tittle
+            font-size: $font-xxl
+            font-weight: 700
+            /*&::before
                 vertical-align: middle
                 margin-right: 50px
                 @media (max-width: 960px)
                     display: block
                     margin-right: 0
                     padding: 0 10px
-        .paket1
+        /*.paket1
             &::before
                 content: url(../images/paket1.svg)
-        .paket2
+        /*.paket2
             &::before
                 content: url(../images/paket2.svg)
-        .paket3
+        /*.paket3
             &::before
                 content: url(../images/paket3.svg)
         .descript
             padding: 10px 0
             color: $black
-            font-weight: 500
+            font-weight: 400
             font-size: $font-xl
+            display: flex
+            text-align: left
+            align-items: center
+            padding: 30px 100px 0
+            &::before
+                content: url(../images/surprise.svg)
+                padding-right: 40px
+                @media (max-width: 640px)
+                    display: none
             @media (max-width: 960px)
                 font-size: ($font-xl - 2)
+                padding: 30px 0
     //Доп услуги
     .price
         .dop
@@ -115,7 +183,7 @@
                 flex-wrap: wrap
         li
             width: 100%
-            padding: 20px
+            padding: 20px 5px
             text-align: left
             @media (max-width: 640px)
                 padding-top: 10px
